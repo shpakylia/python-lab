@@ -8,6 +8,9 @@
             </div>
         {% endif %}
         <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <p>{{
+          a= post.text
+          print(len({x for x in re.findall(r'\w+', a)}))
+        }}</p>
     </div>
 {% endblock %}
